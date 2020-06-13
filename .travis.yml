@@ -17,7 +17,7 @@ after_success:
   #retrieve docker password from env variable and pipe to stdin after running docker login with -u flag and docker_id
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #take images and push to docker hub
-    - docker push ab/multi-client
-    - docker push ab/multi-nginx
-    - docker push ab/multi-server
-    - docker push ab/multi-worker
+  - docker push ab/multi-client
+  - docker push ab/multi-nginx
+  - docker push ab/multi-server
+  - docker push ab/multi-worker
